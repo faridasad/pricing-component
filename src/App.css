@@ -45,7 +45,7 @@
 }
 
 .switch input {
-  display:none;
+  display: none;
 }
 
 .slider {
@@ -56,7 +56,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -66,12 +66,12 @@
   height: 26px;
   left: 4px;
   position: absolute;
-  transition: .4s;
+  transition: 0.4s;
   width: 26px;
 }
 
 input:checked + .slider {
-  background-color: #66bb6a;
+  background-color: blueviolet;
 }
 
 input:checked + .slider:before {
@@ -85,7 +85,6 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
 
 /* header end */
 
@@ -102,6 +101,7 @@ input:checked + .slider:before {
   gap: 1em;
   cursor: pointer;
   padding: 5rem 1.5rem;
+  border-radius: 0.5em;
 }
 
 .plan-price {
@@ -109,7 +109,11 @@ input:checked + .slider:before {
 }
 
 .extra-info-container > * {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
+}
+
+.extra-info-container > p {
+  text-align: center;
 }
 
 .learn-more-button {
@@ -122,10 +126,19 @@ input:checked + .slider:before {
 }
 
 .card-active {
-  background-color: #66bb6a;
+  background-color: blueviolet;
+  color: #fff;
+  transition: 300ms transform ease;
+  transform: scale(1.03);
 }
 
-.card-suggest {
-  background-color: red;
+.button-active {
+  background-color: #fff;
+  color: blueviolet;
 }
 
+.seperation-line {
+  height: 1px;
+  width: 13rem;
+  background-color: #ccc;
+}

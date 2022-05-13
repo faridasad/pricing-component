@@ -7,7 +7,7 @@ const Header = () => {
           <div className='toggle-container'>
             <p>Annualy</p>
             <label className="switch" htmlFor="checkbox">
-              <input type="checkbox" id="checkbox" />
+              <input type="checkbox" id="checkbox" checked />
               <div className="slider round"></div>
             </label>
             <p>Monthly</p>
