@@ -22,5 +22,5 @@ export const plansInfo = [
         accounts: "10 Users Allowed",
         sharelimit: "Send up to 20 GB",
         id: Math.floor(Math.random() * 99999),
-    }
+    },
 ]
