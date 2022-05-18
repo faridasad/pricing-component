@@ -6,7 +6,6 @@ import Cards from './components/Cards';
 function App() {
 
 
-
   return (
     <div className="container">
       <div className='wrapper'>
