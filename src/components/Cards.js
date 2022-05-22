@@ -13,7 +13,7 @@ const Cards = () => {
   let cards = document.querySelectorAll('.card');
   let buttons = document.querySelectorAll('.learn-more-button')
 
-  document.onkeydown = function(e) {
+  /* document.onkeydown = function(e) {
     if(e.key === "ArrowLeft" && current !== 0){
       cards[current - 1].classList.add("card-active")
       buttons[current - 1].classList.add("button-active")
@@ -28,7 +28,7 @@ const Cards = () => {
       buttons[current].classList.remove("button-active")
       setCurrent(current + 1)
     }
-  }
+  } */
   
 
   useEffect(() => {
@@ -36,14 +36,14 @@ const Cards = () => {
   }, [currentCard])
 
 
-  function handleClick(){
-    console.log(Array.prototype.indexOf.call(cards, document.querySelector(".card-active")));
-  }
+  /* function handleClick(){
+    setCurrent(Array.prototype.indexOf.call(cards, document.querySelector(".card-active")))
+    console.log(current);
+  } */
 
-  
 
   return plansInfo.map((plan, index) => (
-    <div ref={plan.name === "Professional" ? cardRef : null} className={isSelected === plan.id ? "card card-active" : "card"} key={index} onClick={() => {handleClick(); setisSelected(plan.id)}}>
+    <div ref={plan.name === "Professional" ? cardRef : null} className={isSelected === plan.id ? "card card-active" : "card"} key={index} onClick={() => {setisSelected(plan.id)}}>
       <p className='plan-nametag'>{plan.name}</p>
       <h1 className='plan-price'>{plan.price}</h1>
       <div className='extra-info-container'>
