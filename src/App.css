@@ -142,3 +142,15 @@ input:checked + .slider:before {
   width: 13rem;
   background-color: #ccc;
 }
+
+@media only screen and (max-width: 970px) {
+  .card-container{
+    flex-direction: column;
+  }
+  .container{
+    height: auto;
+  }
+  .header-container{
+    margin-top: 5em;
+  }
+}

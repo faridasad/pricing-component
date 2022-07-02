@@ -3,43 +3,15 @@ import { useState, useEffect, useRef } from 'react'
 import { plansInfo } from '../data'
 
 
-const Cards = () => {
+const Cards = ({}) => {
   const [isSelected, setisSelected] = useState("")
-  let [current, setCurrent] = useState(1)
   
-
   const cardRef = useRef();
   let currentCard = cardRef.current;
-  let cards = document.querySelectorAll('.card');
-  let buttons = document.querySelectorAll('.learn-more-button')
-
-  /* document.onkeydown = function(e) {
-    if(e.key === "ArrowLeft" && current !== 0){
-      cards[current - 1].classList.add("card-active")
-      buttons[current - 1].classList.add("button-active")
-      cards[current].classList.remove("card-active")
-      buttons[current].classList.remove("button-active")
-      setCurrent(current - 1)
-    }
-    else if(e.key === "ArrowRight" && current !== 2){
-      cards[current + 1].classList.add("card-active")
-      buttons[current + 1].classList.add("button-active")
-      cards[current].classList.remove("card-active")
-      buttons[current].classList.remove("button-active")
-      setCurrent(current + 1)
-    }
-  } */
-  
 
   useEffect(() => {
     cardRef.current.click()
   }, [currentCard])
-
-
-  /* function handleClick(){
-    setCurrent(Array.prototype.indexOf.call(cards, document.querySelector(".card-active")))
-    console.log(current);
-  } */
 
 
   return plansInfo.map((plan, index) => (
