@@ -5,7 +5,7 @@ export const plansInfo = [
         storage: "500 GB Storage",
         accounts: "2 Users Allowed",
         sharelimit: "Send up to 3 GB",
-        id: Math.floor(Math.random() * 99999),
+        id: 1,
     },
     {
         name: "Professional",
@@ -13,7 +13,7 @@ export const plansInfo = [
         storage: "1 TB Storage",
         accounts: "2 Users Allowed",
         sharelimit: "Send up to 10 GB",
-        id: Math.floor(Math.random() * 99999),
+        id: 2,
     },
     {
         name: "Master",
@@ -21,6 +21,6 @@ export const plansInfo = [
         storage: "2 TB Storage",
         accounts: "10 Users Allowed",
         sharelimit: "Send up to 20 GB",
-        id: Math.floor(Math.random() * 99999),
+        id: 3,
     },
 ]
