@@ -3,19 +3,23 @@ import { useState, useEffect, useRef } from 'react'
 import { plansInfo } from '../data'
 
 
-const Cards = ({}) => {
-  const [isSelected, setisSelected] = useState("")
+const Cards = ({arrowID}) => {
+  const [selected, setSelected] = useState("")
+
   
   const cardRef = useRef();
-  let currentCard = cardRef.current;
 
   useEffect(() => {
     cardRef.current.click()
-  }, [currentCard])
+  }, [])
+
+  useEffect(() => {
+    setSelected(arrowID)
+  }, [arrowID])
 
 
   return plansInfo.map((plan, index) => (
-    <div ref={plan.name === "Professional" ? cardRef : null} className={isSelected === plan.id ? "card card-active" : "card"} key={index} onClick={() => {setisSelected(plan.id)}}>
+    <div ref={plan.name === "Professional" ? cardRef : null} className={selected === plan.id ? "card card-active" : "card"} key={index} onClick={() => {setSelected(plan.id)}}>
       <p className='plan-nametag'>{plan.name}</p>
       <h1 className='plan-price'>{plan.price}</h1>
       <div className='extra-info-container'>
@@ -27,7 +31,7 @@ const Cards = ({}) => {
         <p className='data-send'>{plan.sharelimit}</p>
         <div className='seperation-line'></div>
       </div>
-      <button className={isSelected === plan.id ? 'learn-more-button button-active' : 'learn-more-button'}>LEARN MORE</button>
+      <button className={selected === plan.id ? 'learn-more-button button-active' : 'learn-more-button'}>LEARN MORE</button>
     </div>
   )
     
